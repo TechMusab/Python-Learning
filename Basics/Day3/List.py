@@ -23,4 +23,6 @@ student.append(4)
 # student.sort(reverse=True) not supported
 student.reverse()
 student.insert(2,15) #(index,element)
+student.remove(4) # removes th first occurence of element
+student.pop(3) # reoves at particular index
 print(student)
