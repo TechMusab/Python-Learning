@@ -30,4 +30,5 @@ print(len(student))
 print(len(list(student.keys())))
 print(student.values())
 print(student.items())
-
+#print(student["name2"]) # error
+print(student.get("name2")) # This gives none
