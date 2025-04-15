@@ -32,3 +32,5 @@ print(student.values())
 print(student.items())
 #print(student["name2"]) # error
 print(student.get("name2")) # This gives none
+student.update({"city":"islamabad"})
+print(student)
