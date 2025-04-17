@@ -14,3 +14,7 @@ def factorial(n):
     return fact
 print(factorial(7))
 
+def convertusdtopkr(usd):
+    return usd*280.39
+
+print(convertusdtopkr(3))
