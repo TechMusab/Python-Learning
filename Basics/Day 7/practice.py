@@ -12,9 +12,36 @@
 #     f.write(newdata)
     
     
-with open('practice.txt','r') as f:
-    data=f.read()
-    if(data.find('learning')!=-1):
-        print('found')
-    else:
-        print('notfound')
+# with open('practice.txt','r') as f:
+#     data=f.read()
+#     if(data.find('learning')!=-1):
+#         print('found')
+#     else:
+#         print('notfound')
+
+
+# def checkforword(word):
+#     data=True
+#     lineno=1
+#     with open('practice.txt','r') as f:
+#         while data:
+#             data=f.readline()
+#             if(word in data):
+#                 print(lineno)
+#                 return
+#             lineno+=1
+#     return -1
+
+# checkforword("Python")
+def counteven():
+    sum=0
+    with open('practice.txt','r') as f:
+        data=f.read()
+        l=data.split(',')
+        print(l)
+        for n in l:
+            n=int(n)
+            if(n%2==0):
+                sum+=n
+    return sum
+print(counteven())
