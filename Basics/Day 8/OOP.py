@@ -1,5 +1,6 @@
 # to prevent redundency and increase reusability
 class Student:
+    uni_name="ABC University"
     #default constructor
     def __init__(self):
         pass
@@ -7,17 +8,16 @@ class Student:
     def __init__(self,name,marks):
         self.name=name
         self.marks=marks
-        print("Adding new student in Database...")
+    
+    def hello(self):
+        print("Welcome")
     
 
 s1=Student("Musab",98)
 print(s1.name)
 print(s1.marks)
-# print(s1)
-
-
-# class  Car:
-#     color="blue"
-    
-# c=Car()
-# print(c.color)    
+print(s1.uni_name)
+s1.hello()
+# class attributes ==> are common in class
+# object attributes==> specific to objects
+# obj attr > class atr (precedence)
