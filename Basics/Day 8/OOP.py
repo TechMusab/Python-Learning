@@ -217,3 +217,25 @@ s1.phy=66
 print(s1.percentage)
 
 # Polymorphism
+class Complexnumber:
+    def __init__(self, real, imag):
+        self.real=real
+        self.imag=imag
+    
+    def show(self):
+        print("Complex number:", self.real, "+", self.imag, "i")
+    # operator overloading
+    def __add__(self,num2):
+        real=self.real+num2.real
+        imag=self.imag+num2.imag
+        return Complexnumber(real, imag)
+    def __sub__(self,num2):
+        real=self.real-num2.real
+        imag=self.imag-num2.imag
+        return Complexnumber(real, imag)
+
+c1=Complexnumber(2, 3)
+c2=Complexnumber(4, 5)
+c3=c1 + c2
+c3.show()
+# we can use operator overloading to add two complex numbers i.e dunder functions
