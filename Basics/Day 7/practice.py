@@ -20,19 +20,19 @@
 #         print('notfound')
 
 
-# def checkforword(word):
-#     data=True
-#     lineno=1
-#     with open('practice.txt','r') as f:
-#         while data:
-#             data=f.readline()
-#             if(word in data):
-#                 print(lineno)
-#                 return
-#             lineno+=1
-#     return -1
+def checkforword(word):
+    data=True
+    lineno=1
+    with open('practice.txt','r') as f:
+        while data:
+            data=f.readline()
+            if(word in data):
+                print(lineno)
+                return
+            lineno+=1
+    return -1
 
-# checkforword("Python")
+checkforword("Python")
 def counteven():
     sum=0
     with open('practice.txt','r') as f:
