@@ -26,3 +26,6 @@ print(high_salary)
 #Filtering with multiple conditions
 high_salary_and_age = df2[(df2["salary"] > 70000) & (df2["age"] < 30)]
 print(high_salary_and_age)
+#using OR
+high_salary_or_age = df2[(df2["salary"] > 70000) | (df2["age"] < 30)]
+print(high_salary_or_age)
