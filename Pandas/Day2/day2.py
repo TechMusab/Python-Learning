@@ -23,5 +23,10 @@ print(df)
 # Checking Missing data
 print(df.isnull().sum())
 # Handling Missing Data
-df.dropna(axis=0,inplace=True)
+# df.dropna(axis=0,inplace=True)
+# print(df)
+# df["salary"].fillna(df["salary"].mean(), inplace=True)
+# print(df)
+
+df['salary']=df["salary"].interpolate(method="linear")
 print(df)
