@@ -6,8 +6,6 @@ data={
 }
 df=pandas.DataFrame(data)
 print(df)
-# df["Bonus"]=df["salary"] * 0.1
-# print(df)
 #using insert method
 df.insert(2, "Bonus", df["salary"] * 0.1)
 print(df)
@@ -41,3 +39,34 @@ print(df['salary'].sum())
 print(df['salary'].mean())
 print(df['salary'].max())
 print(df['salary'].min())
+#Grouping
+newdata={
+    'Name': ['John',None, 'Anna', 'Peter', 'Linda'],
+    'Age': [28,None, 28, 32, 32],
+    'salary':[50000,None, 60000, 70000, 80000]
+}
+df2=pandas.DataFrame(newdata)
+print(df2.groupby("Age")["salary"].sum())
+# Merging & Joining
+customers_data={
+    'CustomerID': [1, 2, 3,5,6,7,8,9,10],
+    'CustomerName': ['Alfred', 'Maria', 'John', 'Linda','Sara','Tom','Jerry','Anna','Mike'],
+    'Country': ['USA', 'USA', 'UK', 'Canada','USA','UK','Canada','USA','UK']
+}
+order_data={
+    'OrderID': [101, 102, 103, 104, 105],
+    'CustomerID': [1, 2, 3, 4,5],
+    'OrderAmount': [250.50, 150.75, 300.00, 400.25, 500.00],
+}
+dfcustomers=pandas.DataFrame(customers_data)
+dforders=pandas.DataFrame(order_data)
+innermerged=pandas.merge(dfcustomers,dforders, on='CustomerID', how='inner')
+print(innermerged)
+outermerged=pandas.merge(dfcustomers,dforders, on='CustomerID', how='outer')
+print(outermerged)
+leftmerged=pandas.merge(dfcustomers,dforders, on='CustomerID', how='left')
+print(leftmerged)
+rightmerged=pandas.merge(dfcustomers,dforders, on='CustomerID', how='right')
+print(rightmerged)
+
+
