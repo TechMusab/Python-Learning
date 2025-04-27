@@ -30,3 +30,14 @@ print(df.isnull().sum())
 
 df['salary']=df["salary"].interpolate(method="linear")
 print(df)
+#Sorting Values
+df.sort_values(by="salary", ascending=False, inplace=True)
+print(df)
+# Sorting values based on multiple columns
+df.sort_values(by=["salary","Name"], ascending=[True,False], inplace=True)
+print(df)
+# Aggregation
+print(df['salary'].sum())
+print(df['salary'].mean())
+print(df['salary'].max())
+print(df['salary'].min())
