@@ -18,6 +18,6 @@ print(minrow)
 evenly_spaced = np.linspace(0, 10, 100)
 print("\nArray of 100 evenly spaced numbers between 0 and 10:")
 print(evenly_spaced)
-#Generate a 3x3 identity matrix.
+
 identity=np.ones((3,3))
 print(identity)
