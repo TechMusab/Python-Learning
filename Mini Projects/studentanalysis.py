@@ -1,6 +1,7 @@
 import pandas as pd    
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 scores = pd.read_csv('student_scores.csv')
 df= pd.DataFrame(scores)
 # Cleaning Data
@@ -44,4 +45,24 @@ df['English Grade'] = np.select(conditionsenglish, grades,default='F')
 df['Science Grade'] = np.select(conditionsscience, grades,default='F')
 # Adding total score column
 df['Total']=df[['Math','English','Science']].sum(axis=1)
-df.to_csv('student_scores.csv', index=False)
+# Filtering Passed Students
+passed=df[df['Total']>=150]
+print(passed)
+df.to_csv("student_result_analysis.csv", index=False)
+# Graphs
+plt.figure(figsize=(8, 5))
+sns.countplot(x="Math Grade", data=df, order=sorted(df["Math Grade"].unique()))
+plt.title("Math Grade")
+plt.xlabel("Math Grade")
+plt.ylabel("Number of Students")
+plt.tight_layout()
+#plt.show()
+
+subject_means = df[["Math", "English", "Science"]].mean()
+plt.figure(figsize=(8, 5))
+sns.barplot(x=subject_means.index, y=subject_means.values)
+plt.title("Average Marks per Subject")
+plt.xlabel("Subject")
+plt.ylabel("Average Marks")
+plt.tight_layout()
+plt.show()
