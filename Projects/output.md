@@ -1,13 +1,16 @@
-Model Ouput
+# Model Output
 
-Decision tree
+## Decision tree
 Mean: 4.22113025209336
+
 Standard Deviation: 0.7760069805656636
 
-Linear Regression
+## Linear Regression
 Mean: 5.030437102767306
+
 Standard Deviation: 1.0607661158294837
 
-Random Forest Regressor
+## Random Forest Regressor
 Mean: 0.20682404296062074
+
 Standard Devtition: 0.10488577676720068
