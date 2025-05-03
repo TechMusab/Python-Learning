@@ -11,6 +11,6 @@ Mean: 5.030437102767306
 Standard Deviation: 1.0607661158294837
 
 ## Random Forest Regressor
-Mean: 0.20682404296062074
+Mean: 3.355032995286166
 
-Standard Devtition: 0.10488577676720068
+Standard Devtition: 0.6775456312090001
